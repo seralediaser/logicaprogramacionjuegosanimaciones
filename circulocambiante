@@ -1,0 +1,33 @@
+<canvas width="600" height="400"> </canvas>
+<script>
+    function dibujarCirculo(x,y,color,diametro){
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x,y,diametro,0,2*3.14);
+        pincel.fill(); 
+        
+    }
+
+    dibujarCirculo(50,50,"blue",Math.round(Math.random()*50));
+
+</script>
+
+//Esta función sirve para que el circulo cambie de tamaño cada vez que se reinicie el programa, es decir presionando f5
+
+//Esta es la misma pero para un cuadrado solo modificando la altura de un ejercicio anterior
+
+<canvas width="600" height="400"> </canvas>
+<script>
+    function dibujarRectangulo(x,y,color,altura){
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        pincel.fillStyle = color;
+        pincel.fillRect(x,y,50,altura); 
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x,y,50,altura);
+    }
+    
+    dibujarRectangulo(50,50,"green",Math.round(Math.random()*50));
+</script> 
